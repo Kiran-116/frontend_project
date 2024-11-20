@@ -47,7 +47,7 @@ function App() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(process.env.REACT_APP_BACKEND_API);
+      const response = await fetch("https://api.quicksell.co/v1/internal/frontend-assignment");
       const data = await response.json();
       const { tickets, users } = data;
       const tempUsers = users.reduce((acc, user) => {
